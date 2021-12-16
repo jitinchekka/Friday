@@ -72,23 +72,27 @@ if __name__=="__main__" :
 	while True:
 		query=takeComand().lower()
 		'''Logic for FRIDAY'''
+
 		if 'wikipedia' in query:
 			speak('Searching in Wikipedia')
 			query=query.replace("wikipedia","")
 			results=wikipedia.summary(query,sentences=2)
 			speak("According to wikipedia\n")
 			speak(results)
+
 		elif 'youtube' in query:
 			webbrowser.open("https://www.youtube.com/")
+
 		elif 'google' in query:
 			speak('Searching in google, boss!')
 			query=query.replace("search google for","")
 			pwt.search(query)
 			pwt.close_tab(5)
+
 		elif 'music' in query:
 			music()
+			
 		elif 'quit' in query or 'bye' in query:
-			# choice = random.__dir__()
 			choice=randint(0,2)
 			if choice==1:
 				speak("Happy to help!")
