@@ -1,2 +1,2 @@
 # Friday
- Voice assistant
+Friday is a voice assistant made using python.
